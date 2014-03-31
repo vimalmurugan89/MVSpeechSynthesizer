@@ -1,6 +1,6 @@
 MVSpeechSynthesizer
 ===================
 
-Effective use of AVSpeechSynthesizer
+Effective way to use an AVSpeechSynthesizer
 
 This is purpose of speech synthesizer
