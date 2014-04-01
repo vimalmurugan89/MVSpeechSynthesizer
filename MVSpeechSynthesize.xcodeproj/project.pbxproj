@@ -24,7 +24,6 @@
 		84B4B74318D6FC5100459915 /* MVSpeechSynthesizeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4B74218D6FC5100459915 /* MVSpeechSynthesizeTests.m */; };
 		84B4B74E18D6FC7800459915 /* MVSpeechSynthesizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4B74D18D6FC7800459915 /* MVSpeechSynthesizer.m */; };
 		84B4B75318D6FD9500459915 /* MVVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4B75118D6FD9500459915 /* MVVoiceViewController.m */; };
-		84B4B75418D6FD9500459915 /* MVVoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B4B75218D6FD9500459915 /* MVVoiceViewController.xib */; };
 		84B4B75718D7008100459915 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B4B75618D7008100459915 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +62,6 @@
 		84B4B74D18D6FC7800459915 /* MVSpeechSynthesizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVSpeechSynthesizer.m; sourceTree = "<group>"; };
 		84B4B75018D6FD9500459915 /* MVVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVVoiceViewController.h; sourceTree = "<group>"; };
 		84B4B75118D6FD9500459915 /* MVVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVoiceViewController.m; sourceTree = "<group>"; };
-		84B4B75218D6FD9500459915 /* MVVoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVVoiceViewController.xib; sourceTree = "<group>"; };
 		84B4B75618D7008100459915 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -175,7 +173,6 @@
 				84B4B72D18D6FC5100459915 /* ViewController.m */,
 				84B4B75018D6FD9500459915 /* MVVoiceViewController.h */,
 				84B4B75118D6FD9500459915 /* MVVoiceViewController.m */,
-				84B4B75218D6FD9500459915 /* MVVoiceViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -256,7 +253,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B4B75418D6FD9500459915 /* MVVoiceViewController.xib in Resources */,
 				84B4B72B18D6FC5100459915 /* Main_iPad.storyboard in Resources */,
 				84B4B73018D6FC5100459915 /* Images.xcassets in Resources */,
 				84B4B72818D6FC5100459915 /* Main_iPhone.storyboard in Resources */,
