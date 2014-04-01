@@ -17,7 +17,7 @@ Effective way to use an AVSpeechSynthesizer
 
   <h2>MVSpeechSynthesizer</h2>
   <div>MVSpeechSynthesizer in action</div>
-  <div><b>MVNumberKeyBoardType</b> - It shows custom keyboard which is created by me.
+  <div><b>MVSpeechSynthesizer in action</b> - It shows higlight the text.
   <br>
 
    ![Custom Keyboard](https://raw.githubusercontent.com/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
