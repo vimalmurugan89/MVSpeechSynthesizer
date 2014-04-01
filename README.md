@@ -21,11 +21,7 @@ Effective way to use an AVSpeechSynthesizer
    ![Custom Keyboard](https://raw.github.com/vimalmurugan89/MVTextField/master/KeyBoard.gif)
 
    </br>
-<br>
 
-   ![Custom Keyboard](https://raw.githubusercontent.com/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
-
-   <br>
 
 
 <h2>Who need this?<h2>
