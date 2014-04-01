@@ -46,18 +46,19 @@ typedef void (^MVSpeechSpeakingWord)(AVSpeechSynthesizer *synthesizer,NSRange ra
 @property(nonatomic,retain)UIColor *higlightColor; //Default color is blue
 
 //Decide text higlight option
-@property(nonatomic)BOOL isTextHiglight;
+@property(nonatomic)BOOL isTextHiglight; //Default is true
+
 
 /* Set lenaguag for speaking
  */
-@property(nonatomic,strong)NSString *speechLanguage;
+@property(nonatomic,strong)NSString *speechLanguage;//Default is US english
 
 //Set speaking voice
-@property(nonatomic,strong)NSString *speechVoice;
+@property(nonatomic,strong)NSString *speechVoice;//
 
 
 //Set stop/pause boundary attribute
-@property(nonatomic)AVSpeechBoundary speechBoundary;
+@property(nonatomic)AVSpeechBoundary speechBoundary;//Default is AVSpeechBoundaryImmediate
 
 
 //Speech synthesizer instance variable
@@ -67,9 +68,13 @@ typedef void (^MVSpeechSpeakingWord)(AVSpeechSynthesizer *synthesizer,NSRange ra
 @property(nonatomic,strong,readonly)AVSpeechUtterance *speechUtterence;
 
 
+//Set reading string
+@property(nonatomic,strong)NSString *speechString;
+
+
 //Utterance property
 //Set the utterance speech rate
-@property(nonatomic)CGFloat uRate;
+@property(nonatomic)CGFloat uRate; 
 
 //Set the pitchmultiplier value for utterance
 @property(nonatomic)CGFloat pitchMultiplier;
@@ -105,8 +110,8 @@ typedef void (^MVSpeechSpeakingWord)(AVSpeechSynthesizer *synthesizer,NSRange ra
 
 
 
-//- readString is speechSynthesizer going to speak
--(void)startReadingWithString:(NSString*)readString;
+//speechSynthesizer going to read
+-(void)startRead;
 
 //Continue reading with last paused place
 -(void)continueReading;

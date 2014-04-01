@@ -30,13 +30,8 @@
 #pragma mark -View methods
 - (void)viewDidLoad{
     [super viewDidLoad];
-    MVSpeechSynthesizer *mvSpeech=[MVSpeechSynthesizer sharedSyntheSize];
-    //_supportedVoices=[mvSpeech supportedLanguages];
-    NSMutableArray *tmpArray=[NSMutableArray array];
-    for (AVSpeechSynthesisVoice *voices in [mvSpeech supportedLanguages]) {
-        [tmpArray addObject:voices.language];
-    }
-    _supportedVoices=[tmpArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+   
+    _supportedVoices=[[MVSpeechSynthesizer sharedSyntheSize] supportedLanguages];
     [_voiceTableview reloadData];
     
 }
@@ -52,24 +47,33 @@
     if (cell==nil) {
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
-    //AVSpeechSynthesisVoice *voice=_supportedVoices[indexPath.row];
-    
-    NSArray *tempArray=[_supportedVoices[indexPath.row] componentsSeparatedByString:@"-"];
+    AVSpeechSynthesisVoice *voice=_supportedVoices[indexPath.row];
+    NSArray *tempArray=[voice.language componentsSeparatedByString:@"-"];
     NSString *identifier = [NSLocale localeIdentifierFromComponents: [NSDictionary dictionaryWithObject:tempArray[1] forKey: NSLocaleCountryCode]];
     NSString *country = [[NSLocale currentLocale] displayNameForKey: NSLocaleIdentifier value: identifier];
     cell.detailTextLabel.text=country;
-    
-    
     NSLocale *enLocale =[[NSLocale alloc] initWithLocaleIdentifier:@"en"];
     NSString *displayNameString = [enLocale displayNameForKey:NSLocaleIdentifier value:tempArray[0]];
-    cell.textLabel.text=displayNameString;//voice.language;
+    
+    cell.textLabel.text=displayNameString;
+    MVSpeechSynthesizer *mvSpeech=[MVSpeechSynthesizer sharedSyntheSize];
+    if ([voice.language isEqualToString:mvSpeech.speechLanguage]) {
+        cell.accessoryType=UITableViewCellAccessoryCheckmark;
+    }else{
+       cell.accessoryType=UITableViewCellAccessoryNone;
+    }
     
     return cell;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    AVSpeechSynthesisVoice *voice=_supportedVoices[indexPath.row];
+    MVSpeechSynthesizer *mvSpeech=[MVSpeechSynthesizer sharedSyntheSize];
+    mvSpeech.speechLanguage=voice.language;
+    [_voiceTableview reloadData];
+}
 
 
 #pragma mark - Received memory warnings
