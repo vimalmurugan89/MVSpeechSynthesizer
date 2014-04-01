@@ -38,6 +38,16 @@ typedef void (^MVSpeechSpeakingWord)(AVSpeechSynthesizer *synthesizer,NSRange ra
 //Singleton method
 +(id)sharedSyntheSize;
 
+
+//Pass the input view
+@property(nonatomic)id inputView;
+
+//Higlight color property
+@property(nonatomic,retain)UIColor *higlightColor; //Default color is blue
+
+//Decide text higlight option
+@property(nonatomic)BOOL isTextHiglight;
+
 /* Set lenaguag for speaking
  */
 @property(nonatomic,strong)NSString *speechLanguage;
@@ -57,20 +67,45 @@ typedef void (^MVSpeechSpeakingWord)(AVSpeechSynthesizer *synthesizer,NSRange ra
 @property(nonatomic,strong,readonly)AVSpeechUtterance *speechUtterence;
 
 
+//Utterance property
+//Set the utterance speech rate
+@property(nonatomic)CGFloat uRate;
+
+//Set the pitchmultiplier value for utterance
+@property(nonatomic)CGFloat pitchMultiplier;
+
+//Set post delay for utterance
+@property(nonatomic)CGFloat uPostDelay;
+
+//Set pre delay for utterance
+@property(nonatomic)CGFloat uPreDelay;
 
 
 //block methods properties
+//will fire while start to read
 @property(nonatomic,copy)MVDidStartSpeech speechStartBlock;
+
+//Will fire once the read ended
 @property(nonatomic,copy)MVDidFinishSpeech speechFinishBlock;
+
+//Will fire once the read pause
 @property(nonatomic,copy)MVDidPauseSpeech speechPauseBlock;
+
+//Will fire when speech continued
 @property(nonatomic,copy)MVDidContinueSpeech speechContinueBlock;
+
+//Will fire when cancel the speech
 @property(nonatomic,copy)MVDidCancelSpeech speechCancelBlock;
+
+//Will fire continuously when new word read.
 @property(nonatomic,copy)MVSpeakRangeSpeech speechRangeBlock;
+
+//Will fire continuously when new word start
 @property(nonatomic,copy)MVSpeechSpeakingWord speechSpeakingWord;
 
 
-//Start reading process with
-  //- readString is speechSynthesizer going to speak
+
+//- readString is speechSynthesizer going to speak
 -(void)startReadingWithString:(NSString*)readString;
 
 //Continue reading with last paused place
@@ -86,9 +121,18 @@ typedef void (^MVSpeechSpeakingWord)(AVSpeechSynthesizer *synthesizer,NSRange ra
 -(NSString*)speakingString;
 
 //Get available languages
--(NSArray*)listOfVoices;
+-(NSArray*)supportedLanguages;
+
+//Get status of speaking
+-(BOOL)isSpeaking;
+
+//Get status of paused
+-(BOOL)isPaused;
 
 //Get Current language code
 -(NSString*)currentLangaugeCode;
+
+//Get speaking language
+-(NSString*)speakingLanguage;
 
 @end

@@ -26,8 +26,6 @@
 		84B4B75318D6FD9500459915 /* MVVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4B75118D6FD9500459915 /* MVVoiceViewController.m */; };
 		84B4B75418D6FD9500459915 /* MVVoiceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B4B75218D6FD9500459915 /* MVVoiceViewController.xib */; };
 		84B4B75718D7008100459915 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B4B75618D7008100459915 /* AVFoundation.framework */; };
-		84B4B75918D7109300459915 /* UIWebViewSearch.js in Resources */ = {isa = PBXBuildFile; fileRef = 84B4B75818D7109300459915 /* UIWebViewSearch.js */; };
-		84B4B75C18D710C200459915 /* MVSearchWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4B75B18D710C200459915 /* MVSearchWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +65,6 @@
 		84B4B75118D6FD9500459915 /* MVVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVoiceViewController.m; sourceTree = "<group>"; };
 		84B4B75218D6FD9500459915 /* MVVoiceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVVoiceViewController.xib; sourceTree = "<group>"; };
 		84B4B75618D7008100459915 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		84B4B75818D7109300459915 /* UIWebViewSearch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = UIWebViewSearch.js; sourceTree = "<group>"; };
-		84B4B75A18D710C200459915 /* MVSearchWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVSearchWebView.h; sourceTree = "<group>"; };
-		84B4B75B18D710C200459915 /* MVSearchWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVSearchWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,14 +171,11 @@
 		84B4B74F18D6FD7000459915 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				84B4B75818D7109300459915 /* UIWebViewSearch.js */,
 				84B4B72C18D6FC5100459915 /* ViewController.h */,
 				84B4B72D18D6FC5100459915 /* ViewController.m */,
 				84B4B75018D6FD9500459915 /* MVVoiceViewController.h */,
 				84B4B75118D6FD9500459915 /* MVVoiceViewController.m */,
 				84B4B75218D6FD9500459915 /* MVVoiceViewController.xib */,
-				84B4B75A18D710C200459915 /* MVSearchWebView.h */,
-				84B4B75B18D710C200459915 /* MVSearchWebView.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -264,7 +256,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B4B75918D7109300459915 /* UIWebViewSearch.js in Resources */,
 				84B4B75418D6FD9500459915 /* MVVoiceViewController.xib in Resources */,
 				84B4B72B18D6FC5100459915 /* Main_iPad.storyboard in Resources */,
 				84B4B73018D6FC5100459915 /* Images.xcassets in Resources */,
@@ -292,7 +283,6 @@
 				84B4B72E18D6FC5100459915 /* ViewController.m in Sources */,
 				84B4B72518D6FC5100459915 /* AppDelegate.m in Sources */,
 				84B4B72118D6FC5100459915 /* main.m in Sources */,
-				84B4B75C18D710C200459915 /* MVSearchWebView.m in Sources */,
 				84B4B74E18D6FC7800459915 /* MVSpeechSynthesizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

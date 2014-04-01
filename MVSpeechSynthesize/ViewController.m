@@ -9,143 +9,52 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-@property(nonatomic,weak)IBOutlet MVSearchWebView *searchWebView;
-@property(nonatomic,weak)NSMutableAttributedString *sampleAttributedText;
 @property(nonatomic,weak)IBOutlet UITextView *sampleTextview;
-@property(nonatomic,strong)UIView *higlightTextView;
-@property(nonatomic,strong)CALayer *higlightLayer;
-@property(nonatomic)NSRange sampleRange;
 @property(nonatomic,weak)IBOutlet UIButton *readButton;
 -(IBAction)startRead:(id)sender;
--(IBAction)higlight:(id)sender;
+-(IBAction)stopRead:(id)sender;
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     
-   
-    _readButton.enabled=NO;
-    _searchWebView.hidden=NO;
-    _sampleTextview.hidden=YES;
-    
-    
-    _higlightTextView=[[UIView alloc]init];
-    _higlightTextView.backgroundColor=[UIColor yellowColor];
-   // [_sampleTextview addSubview:_higlightTextView];
-    
-    _higlightLayer=[CALayer layer];
-   
-    
-    //[_higlightLayer setCornerRadius:5.0f];
-    [_higlightLayer setBackgroundColor:[[UIColor blueColor]CGColor]];
-    [_higlightLayer setOpacity:0.2f];
-    [[_sampleTextview layer]addSublayer:_higlightLayer];
-  //  [_higlightLayer setBorderColor:[[UIColor blackColor]CGColor]];
- //   [_higlightLayer setBorderWidth:3.0f];
-  //  [_higlightLayer setShadowColor:[[UIColor blackColor]CGColor]];
-   // [_higlightLayer setShadowOffset:CGSizeMake(20.0f, 20.0f)];
-   // [_higlightLayer setShadowOpacity:1.0f];
-   // [_higlightLayer setShadowRadius:10.0f];
-  //  [[_sampleTextview layer]addSublayer:_higlightLayer];
-    
-    
- /*   [_searchWebView loadHTMLString:@"<html><head></head><body id='value'>I can't see any reason why the US version would have any less voices. Indeed it presumably has at least one more as Siri in the US has a choice of male and female voices - the male voice sounds like it be Alex from the Mac, but there doesn't seem to be any way to access it programmatically.</body></html>" baseURL:nil];*/
-    
-  /*  [_searchWebView loadHTMLString:@"<!DOCTYPE HTML><html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head><body><div id=\"main\" contenteditable=\"false\" style=\"border:solid 1px black; width:300px; height:300px\"><div>Hello world!</div><div><br></div><div>This is a paragraph</div></div></body></html>" baseURL:nil];*/
-    
-    _searchWebView.webviewFinished=^(id webView){
-        _readButton.enabled=YES;
-    };
-    
-  /*  _sampleTextview.text=@"I can't see any reason why the US version would have any less voices. Indeed it presumably has at least one more as Siri in the US has a choice of male and female voices - the male voice sounds like it be Alex from the Mac, but there doesn't seem to be any way to access it programmatically.";
-    //_sampleAttributedText=_sampleTextview.attributedText.mutableCopy;*/
-    
-    
-    [_searchWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.google.co.in"]]];
-    
-	// Do any additional setup after loading the view, typically from a nib.
+    _sampleTextview.text=@"THE WIND AND THE SUN.\nOnce the Wind and the Sun had an argument. I am stronger than you said the Wind. No, you are not, said the Sun. Just at that moment they saw a traveler walking across the road. He was wrapped in a shawl. The Sun and the Wind agreed that whoever could separate the traveller from his shawl was stronger. The Wind took the first turn. He blew with all his might to tear the traveller’s shawl from his shoulders. But the harder he blew, the tighter the traveller gripped the shawl to his body. The struggle went on till the Wind’s turn was over. Now it was the Sun’s turn. The Sun smiled warmly. The traveller felt the warmth of the smiling Sun. Soon he let the shawl fall open. The Sun’s smile grew warmer and warmer... hotter and hotter. Now the traveller no longer needed his shawl. He took it off and dropped it on the ground. The Sun was declared stronger than the Wind. \nMoral: Brute force can’t achieve what a gentle smile can.";
+    //;@"Lässt du dir vor dem Schlafen gehen gerne von deinen Eltern eine gute Nacht Geschichte vorlesen? Hier bekommst du ein paar nette Geschichten die du Ausdrucken kannst und deinen Eltern zum Vorlesen geben kannst.";
 }
 
 -(IBAction)startRead:(id)sender{
     
-    
-    _searchWebView.hidden=YES;
-    _sampleTextview.hidden=NO;
     [sender setEnabled:NO];
-    NSString *webViewString=[_searchWebView stringByEvaluatingJavaScriptFromString:@"document.body.innerText;"];
-    NSLog(@"webview =%@",webViewString);
-    _sampleTextview.text=webViewString;
-    
-    
     MVSpeechSynthesizer *mvSpeech=[MVSpeechSynthesizer sharedSyntheSize];
-    [mvSpeech startReadingWithString:webViewString];
+    mvSpeech.inputView=_sampleTextview;
+    mvSpeech.speechVoice=@"hi-IN";//@"en-US";//@"de-DE";
     
+    //    NSLocale *currentLocale = [NSLocale currentLocale];  // get the current locale.
+    //    NSString *countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
+    //    NSLog(@"country code=%@,%@",countryCode,[NSLocale canonicalLanguageIdentifierFromString:@"en"]);//[NSLocale ISOCountryCodes]);
+    mvSpeech.higlightColor=[UIColor yellowColor];
+    mvSpeech.isTextHiglight=YES;
+    [mvSpeech startReadingWithString:_sampleTextview.text];
+    NSLog(@"curr=%@",[mvSpeech supportedLanguages]);
     mvSpeech.speechFinishBlock=^(AVSpeechSynthesizer *synthesizer, AVSpeechUtterance *utterence){
         [sender setEnabled:YES];
-        _searchWebView.hidden=NO;
-        _sampleTextview.hidden=YES;
-       // _sampleRange=NSMakeRange(-1, 0);
-       // _sampleTextview.attributedText=nil;
-         [_higlightLayer removeFromSuperlayer];
-    };
-    
-    mvSpeech.speechSpeakingWord=^(AVSpeechSynthesizer *synthesizer,NSRange range, AVSpeechUtterance *utterence,NSString *speakingWord){
-   
-        //NSLog(@"rect==%@",));
-        
-        CGRect finalLineRect=[self frameOfTextRange:range inTextView:_sampleTextview];
-       // _higlightTextView.frame=rectFrame;
-        [_higlightLayer setFrame:finalLineRect];
-        [_higlightLayer setBounds:finalLineRect];
-        [_higlightLayer removeFromSuperlayer];
-        [[_sampleTextview layer]addSublayer:_higlightLayer];
-                                            
-      /*   NSMutableAttributedString *textViewAttributedString = _sampleTextview.attributedText.mutableCopy;
-   
-        
-        if(_sampleRange.location!=NSNotFound){
-            [textViewAttributedString removeAttribute:NSBackgroundColorAttributeName range:_sampleRange];
-        }
-            
-        
-        [textViewAttributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor yellowColor] range:range];
-   
-        _sampleTextview.attributedText=textViewAttributedString;
-        _sampleRange=range;*/
-        [_sampleTextview scrollRangeToVisible:range];
-       
-        
     };
     
 }
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [_sampleTextview resignFirstResponder];
+}
 
-- (CGRect)frameOfTextRange:(NSRange)range inTextView:(UITextView *)textView
-{
-    UITextPosition *beginning = textView.beginningOfDocument; //Error=: request for member 'beginningOfDocument' in something not a structure or union
-    
-    UITextPosition *start = [textView positionFromPosition:beginning offset:range.location];
-    UITextPosition *end = [textView positionFromPosition:start offset:range.length];
-    UITextRange *textRange = [textView textRangeFromPosition:start toPosition:end];
-    CGRect rect = [textView firstRectForRange:textRange];  //Error: Invalid Intializer
-    
-    return [textView convertRect:rect fromView:textView.textInputView]; // Error: request for member 'textInputView' in something not a structure or union
-    
+-(IBAction)stopRead:(id)sender{
     
     
 }
 
--(IBAction)higlight:(id)sender{
-  //  [_searchWebView highlightAllOccurencesOfString:@"Siri"];
-    [_searchWebView highlightBackground:@"see"];
-}
-
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 @end
