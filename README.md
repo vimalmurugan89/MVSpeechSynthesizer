@@ -20,7 +20,7 @@ Effective way to use an AVSpeechSynthesizer
   <div><b>MVNumberKeyBoardType</b> - It shows custom keyboard which is created by me.
   <br>
 
-   ![Custom Keyboard](https://raw.github.com/vimalmurugan89/MVTextField/master/KeyBoard.gif)
+   ![Custom Keyboard](https://raw.githubusercontent.com/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
 
    <br>
 
