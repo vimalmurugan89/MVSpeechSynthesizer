@@ -3,7 +3,7 @@ MVSpeechSynthesizer
 
 Effective way to use an AVSpeechSynthesizer
 
- <h2>Why MVSpeechsynthesizer?<h2> 
+ <h2>Why MVSpeechSynthesizer?<h2> 
  
 <p>1. Simple way to integrate the AVSpeechsynthesizer into your app.</p>
 <p>2. Instead of delgate method it provides block methods.</p>
