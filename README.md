@@ -15,16 +15,13 @@ Effective way to use an AVSpeechSynthesizer
 <p>8. It can list all supported langauages and their country name</p>
 
 <h2>MVSpeechSynthesizer in Action<h2>
+<div>Custom keyboard action</div>
 <br>
 
    ![Custom Keyboard](https://raw.githubusercontent.com/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
 
    <br>
-<br>
 
-   ![Speech Text higlight](https://raw.githubusercontent.com/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
-
-</br>
 
 <h2>Who need this?<h2>
 
