@@ -9,7 +9,7 @@ Effective way to use an AVSpeechSynthesizer
 <p>2. Instead of delgate method it provides block methods.</p>
 <p>3. Apart from simple usage it can auto detect the language of given string and read.</p>
 <p>4. It can higlight currently reading word.</p>
-<p>5. It also throw currently reading word with their langauge.</p> 
+<p>5. It also throw currently reading word</p> 
 <p>6. It can auto scroll the page if once reached bottom of the text box.</p>
 <p>7. It can read all languages which is supported by AVSpeechSynthesizer</p>
 <p>8. It can list all supported langauages and their country name</p>
