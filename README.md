@@ -15,7 +15,7 @@ Effective way to use an AVSpeechSynthesizer
 <p>8. It can list all supported langauages and their country name</p>
 
 <h2>MVSpeechSynthesizer in Action<h2>
-<div>Custom keyboard action</div>
+<div>Custom keyboard action
   <br>
 
    ![Custom Keyboard](https://raw.github.com/vimalmurugan89/MVTextField/master/KeyBoard.gif)
