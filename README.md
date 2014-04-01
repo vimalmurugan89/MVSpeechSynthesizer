@@ -16,7 +16,7 @@ Effective way to use an AVSpeechSynthesizer
 
 <h2>MVSpeechSynthesizer in Action<h2>
 <div>Custom keyboard action</div>
-![Custom Keyboard](/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
+![Custom Keyboard](https://raw.githubusercontent.com/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
 
 <h2>Who need this?<h2>
 
