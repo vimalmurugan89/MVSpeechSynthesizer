@@ -18,6 +18,11 @@ Effective way to use an AVSpeechSynthesizer
 <div>Custom keyboard action</div>
 <br>
 
+   ![Custom Keyboard](https://raw.github.com/vimalmurugan89/MVTextField/master/KeyBoard.gif)
+
+   <br>
+<br>
+
    ![Custom Keyboard](https://raw.githubusercontent.com/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
 
    <br>
