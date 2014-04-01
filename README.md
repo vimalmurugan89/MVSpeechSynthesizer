@@ -16,8 +16,9 @@ Effective way to use an AVSpeechSynthesizer
 
 <h2>MVSpeechSynthesizer in Action<h2>
 <br>
-![Speech Text higlight](https://raw.githubusercontent.com/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
-   
+
+   ![Speech Text higlight](https://raw.githubusercontent.com/vimalmurugan89/MVSpeechSynthesizer/master/speechsynthesizer.gif)
+
 </br>
 
 <h2>Who need this?<h2>
