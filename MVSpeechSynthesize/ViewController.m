@@ -13,6 +13,7 @@
 @property(nonatomic,weak)IBOutlet UIButton *readButton;
 -(IBAction)startRead:(id)sender;
 -(IBAction)stopRead:(id)sender;
+-(IBAction)voicePress:(id)sender;
 @end
 
 @implementation ViewController
@@ -24,6 +25,12 @@
     //;@"Lässt du dir vor dem Schlafen gehen gerne von deinen Eltern eine gute Nacht Geschichte vorlesen? Hier bekommst du ein paar nette Geschichten die du Ausdrucken kannst und deinen Eltern zum Vorlesen geben kannst.";
 }
 
+#pragma mark - Button Press
+-(IBAction)voicePress:(id)sender{
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle: nil];
+    MVVoiceViewController *controller = (MVVoiceViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"MVVoiceViewController"];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 -(IBAction)startRead:(id)sender{
     
     [sender setEnabled:NO];

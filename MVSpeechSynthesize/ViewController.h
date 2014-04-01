@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MVSpeechSynthesizer.h"
+#import "MVVoiceViewController.h"
 
 
 @interface ViewController : UIViewController

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class ViewController;
 @interface MVVoiceViewController : UIViewController
-
+@property(nonatomic,weak)ViewController *controller;
 @end
