@@ -34,6 +34,7 @@ Effective way to use an AVSpeechSynthesizer
    <p>for changing the string just copy some other string and paste on text box.</p>
    <p>For choosing language just press language button you will navigate to the list of languages page their you can choose language</p>
    <p>For enable and disable the highlight use <b>isHighlight</b> object</p>
+   <p>For changing speech voice <b>uRate</b> and <b>pitchMultiplier</b> objects</p>
     
    <p>Just initialize the <b>MVSpeechsynthesizer</b> class and do the following steps,</p>
    
