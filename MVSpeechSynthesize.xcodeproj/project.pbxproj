@@ -14,7 +14,6 @@
 		84B4B72118D6FC5100459915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4B72018D6FC5100459915 /* main.m */; };
 		84B4B72518D6FC5100459915 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4B72418D6FC5100459915 /* AppDelegate.m */; };
 		84B4B72818D6FC5100459915 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B4B72618D6FC5100459915 /* Main_iPhone.storyboard */; };
-		84B4B72B18D6FC5100459915 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B4B72918D6FC5100459915 /* Main_iPad.storyboard */; };
 		84B4B72E18D6FC5100459915 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B4B72D18D6FC5100459915 /* ViewController.m */; };
 		84B4B73018D6FC5100459915 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B4B72F18D6FC5100459915 /* Images.xcassets */; };
 		84B4B73718D6FC5100459915 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B4B73618D6FC5100459915 /* XCTest.framework */; };
@@ -49,7 +48,6 @@
 		84B4B72318D6FC5100459915 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		84B4B72418D6FC5100459915 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		84B4B72718D6FC5100459915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		84B4B72A18D6FC5100459915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		84B4B72C18D6FC5100459915 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		84B4B72D18D6FC5100459915 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		84B4B72F18D6FC5100459915 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 				84B4B72318D6FC5100459915 /* AppDelegate.h */,
 				84B4B72418D6FC5100459915 /* AppDelegate.m */,
 				84B4B72618D6FC5100459915 /* Main_iPhone.storyboard */,
-				84B4B72918D6FC5100459915 /* Main_iPad.storyboard */,
 				84B4B72F18D6FC5100459915 /* Images.xcassets */,
 				84B4B71B18D6FC5100459915 /* Supporting Files */,
 			);
@@ -253,7 +250,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B4B72B18D6FC5100459915 /* Main_iPad.storyboard in Resources */,
 				84B4B73018D6FC5100459915 /* Images.xcassets in Resources */,
 				84B4B72818D6FC5100459915 /* Main_iPhone.storyboard in Resources */,
 				84B4B71F18D6FC5100459915 /* InfoPlist.strings in Resources */,
@@ -318,14 +314,6 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		84B4B72918D6FC5100459915 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84B4B72A18D6FC5100459915 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		84B4B73F18D6FC5100459915 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -372,7 +360,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -404,7 +392,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -418,6 +406,7 @@
 				GCC_PREFIX_HEADER = "MVSpeechSynthesize/MVSpeechSynthesize-Prefix.pch";
 				INFOPLIST_FILE = "MVSpeechSynthesize/MVSpeechSynthesize-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -431,6 +420,7 @@
 				GCC_PREFIX_HEADER = "MVSpeechSynthesize/MVSpeechSynthesize-Prefix.pch";
 				INFOPLIST_FILE = "MVSpeechSynthesize/MVSpeechSynthesize-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
