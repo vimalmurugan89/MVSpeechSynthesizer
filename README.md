@@ -30,15 +30,9 @@ Effective way to use an AVSpeechSynthesizer
 <p>2. Whoever wants to read their EULA or privacy policy to their user</p>
 <p>3. Whoever developing apps with voice navigation</p>
 <p>4. Whoever wants to integrate reading functionality to thier app</p>
-<h2>MVKeyBoardType</h2>
-  <div>This is custom keyboard for your specific field</div>
-  <div><b>MVNumberKeyBoardType</b> - It shows custom keyboard which is created by me.
-  <br>
 
-   ![keepaspectratio,width=200, height=200](http://a2.mzstatic.com/us/r30/Purple/v4/f0/e1/16/f0e11658-759f-5569-1b6c-a17df0ca3670/mzl.byxfoddw.png)
-
-   <br>
-
+<h2>Apps Using this control</h2>
+<a href="https://itunes.apple.com/us/app/secure-notes-lock-your-important/id836702121?mt=8">Secure Note</a>
 
 <h2>Future enhancement<h2>
 
