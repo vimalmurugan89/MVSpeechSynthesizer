@@ -17,7 +17,7 @@ s.author = {
 
 s.source = {
     :git => 'https://github.com/vimalmurugan89/MVSpeechSynthesizer.git',
-    :tag => s.version.to_s
+   
   }
 
   s.source_files = 'MVSpeechSynthesize/MVSpeechSynthesizer.{h,m}'

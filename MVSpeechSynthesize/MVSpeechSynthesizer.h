@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 //List of Blocks methods for handling delegate methods of AVSpeechSynthesizer
 
