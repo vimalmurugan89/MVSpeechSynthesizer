@@ -32,7 +32,7 @@ Effective way to use an AVSpeechSynthesizer
 <p>4. Whoever wants to integrate reading functionality to thier app</p>
 
 <h2>Apps Using this control</h2>
-<a href="https://itunes.apple.com/us/app/secure-notes-lock-your-important/id836702121?mt=8">Secure Note</a>
+<a href="https://itunes.apple.com/us/app/secure-notes-lock-your-important/id836702121?mt=8">Secure Notes - Lock your important notes</a>
 
 <h2>Future enhancement<h2>
 
