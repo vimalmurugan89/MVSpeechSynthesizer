@@ -32,6 +32,14 @@ Effective way to use an AVSpeechSynthesizer
 <p>4. Whoever wants to integrate reading functionality to thier app</p>
 
 <h2>Apps Using this control</h2>
+<h2>MVKeyBoardType</h2>
+  <div>This is custom keyboard for your specific field</div>
+  <div><b>MVNumberKeyBoardType</b> - It shows custom keyboard which is created by me.
+  <br>
+
+   ![Custom Keyboard](http://a2.mzstatic.com/us/r30/Purple/v4/c4/d9/bb/c4d9bbbb-c97d-cac2-b8d0-78146cb1eb57/icon_256.png)
+
+   <br>
 <a href="https://itunes.apple.com/us/app/secure-notes-lock-your-important/id836702121?mt=8">Secure Notes - Lock your important notes</a>
 <p>Let me know if any other using this control</p>
 
