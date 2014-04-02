@@ -31,6 +31,18 @@ Effective way to use an AVSpeechSynthesizer
 <p>3. Whoever developing apps with voice navigation</p>
 <p>4. Whoever wants to integrate reading functionality to thier app</p>
 
+<h2>Apps Using this control</h2>
+
+  
+  
+  <br>
+
+   ![Custom Keyboard](http://a2.mzstatic.com/us/r30/Purple/v4/c4/d9/bb/c4d9bbbb-c97d-cac2-b8d0-78146cb1eb57/icon_256.png)
+
+   <br>
+<a href="https://itunes.apple.com/us/app/secure-notes-lock-your-important/id836702121?mt=8">Secure Notes - Lock your important notes</a>
+<p>Let me know if any other using this control(Just drop a mail)</p>
+
 <h2>Future enhancement<h2>
 
    <p>1. To read any webpage with highlighted text</p>
