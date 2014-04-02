@@ -33,6 +33,7 @@ Effective way to use an AVSpeechSynthesizer
 
 <h2>Apps Using this control</h2>
 <a href="https://itunes.apple.com/us/app/secure-notes-lock-your-important/id836702121?mt=8">Secure Notes - Lock your important notes</a>
+<p>Let me know if any other using this control</p>
 
 <h2>Future enhancement<h2>
 
