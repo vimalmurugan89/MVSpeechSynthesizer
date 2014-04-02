@@ -32,7 +32,7 @@ Effective way to use an AVSpeechSynthesizer
 <p>4. Whoever wants to integrate reading functionality to thier app</p>
 
 <h2>Apps Using this control</h2>
-<h2>MVKeyBoardType</h2>
+
   <div>This is custom keyboard for your specific field</div>
   <div><b>MVNumberKeyBoardType</b> - It shows custom keyboard which is created by me.
   <br>
