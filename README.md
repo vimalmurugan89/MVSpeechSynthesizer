@@ -34,7 +34,7 @@ Effective way to use an AVSpeechSynthesizer
 <h2>Apps Using this control</h2>
 
   
-  <div><b>MVNumberKeyBoardType</b> - It shows custom keyboard which is created by me.
+  
   <br>
 
    ![Custom Keyboard](http://a2.mzstatic.com/us/r30/Purple/v4/c4/d9/bb/c4d9bbbb-c97d-cac2-b8d0-78146cb1eb57/icon_256.png)
