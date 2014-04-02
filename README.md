@@ -35,7 +35,7 @@ Effective way to use an AVSpeechSynthesizer
   <div><b>MVNumberKeyBoardType</b> - It shows custom keyboard which is created by me.
   <br>
 
-   ![Custom Keyboard](https://itunes.apple.com/us/app/secure-notes-lock-your-important/id836702121?mt=8)
+   ![Custom Keyboard](http://a2.mzstatic.com/us/r30/Purple/v4/f0/e1/16/f0e11658-759f-5569-1b6c-a17df0ca3670/mzl.byxfoddw.png)
 
    <br>
 
