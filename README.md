@@ -31,11 +31,11 @@ Effective way to use an AVSpeechSynthesizer
 <p>3. Whoever developing apps with voice navigation</p>
 <p>4. Whoever wants to integrate reading functionality to thier app</p>
 
-<h2>Pod Installation<h2>
+<h2>Pod Installation</h2>
 
-Add the following to your CocoaPods Podfile
+<p>Add the following to your CocoaPods Podfile</p>
 
-pod 'MVSpeechSynthesizer'
+    pod 'MVSpeechSynthesizer'
 
 <h2>Apps Using this control</h2>
 
