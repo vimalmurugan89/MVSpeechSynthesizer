@@ -128,6 +128,12 @@
            
         }
     }];
+    
+        //if single word send to speechstring means it won't return language
+        //So we take default as enlish in us
+        if (!_speechLanguage) {
+            _speechLanguage=@"en-US";
+        }
     }
     _speechString=speechString;
 }

@@ -83,6 +83,8 @@
    
     mvSpeech.speechStartBlock=^(AVSpeechSynthesizer *synthesizer, AVSpeechUtterance *utterence){
         
+        NSLog(@"speech language==%@",speechLanguage);
+        
         NSArray *tempArray=[speechLanguage componentsSeparatedByString:@"-"];
         NSString *identifier = [NSLocale localeIdentifierFromComponents: [NSDictionary dictionaryWithObject:tempArray[1] forKey: NSLocaleCountryCode]];
         NSString *country = [[NSLocale currentLocale] displayNameForKey: NSLocaleIdentifier value: identifier];
